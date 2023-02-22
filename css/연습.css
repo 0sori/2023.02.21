@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+#container {
+    width: 1000px;
+    height: 700px;
+    border: 3px solid black;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#container > div:first-child {
+    background-color: ;
+    flex-basis: ;
+}
+
+#container > div:last-child {
+    background-color: blueviolet;
+    flex-basis: 20%;
+}
+
+

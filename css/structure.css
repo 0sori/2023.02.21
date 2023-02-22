@@ -1,0 +1,272 @@
+* {
+    box-sizing: border-box;
+    /* 콘텐츠 보더 패딩을 합산해서 보여주는 기능 */
+    /* content + border + padding */
+
+    margin: 0;
+    padding: 0;
+}
+
+/* main */
+main {
+    width: 1140px;
+    margin: auto;
+    /* body태그 가로방향 가운데 배치 */
+}
+
+/* footer */
+footer {
+    height: 200px;
+    background-color: #a3add342;
+
+    color: rgba(255, 0, 0, 0.5);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+footer > p {
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+footer > article > * {
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+    color: black;
+}
+
+footer span {
+    padding: 0 10px;
+}
+
+/* header */
+header {
+    height:  200px;
+
+    display: flex;
+}
+
+header > section:nth-child(1) {
+    flex-basis: 15%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header > section:nth-child(2) {
+    flex-basis: 70%;
+
+    /* 검색창 정가운데 배치 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header > section:nth-child(3) {
+    flex-basis: 15%;
+}
+
+#home-logo {
+    width: 120px;
+}
+
+.serch-area {
+    width: 500px;
+}
+
+/* 검색창 테두리 */
+.serch-area fieldset {
+    border: 2px solid #455ba8;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 0;
+
+    display: flex;
+}
+
+/* 검색어 입력상자 */
+#query {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+
+    border: none;
+    /* input 요소에 포커스 맞춰졌을때 생기는 테두리 */
+    outline: none;
+
+    width: 92%;
+}
+
+/* 검색버튼 */
+#serch-btn {
+    width: 8%;
+    background-color: transparent;
+    border: none;
+
+    font-size: 1.2em;
+    cursor: pointer;/* 마우스 손가락모양 */
+    color: #455ba8;
+}
+
+/* nav */
+nav {
+    height: 50px;
+    border-bottom: 2px solid black;
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    /* 화면 밖으로 요소가 벗어났을때 지정된 위치에 고정 */
+    top: 0;
+    background-color: white;
+}
+
+nav > ul {
+    list-style: none;
+
+    display: flex;
+    height:  100%;
+}
+
+nav li {
+    flex-basis: 150px;
+}
+
+nav li > a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+    border-radius: 5px;
+    transition-duration: 0.2s;
+}
+
+/* 메뉴(a)에 마우스가 올라왔을 때 */
+nav li > a:hover {
+    background-color: #455ba8;
+    color: white;
+}
+
+/* content */
+.content {
+    height: 800px;
+    display: flex;
+}
+
+.content-1 {
+    flex-basis: 70%;
+}
+
+.content-2 {
+    flex-basis: 30%;
+}
+
+form[name='login-form'] {
+    height: 150px;
+    padding: 10px;
+    margin-top: 10px;
+
+    display: flex;
+    /* 중심축을 세로로 변경 */
+    flex-direction: column;
+
+    /* 중심축을 가운데로 배치 */
+    justify-content: center;
+}
+
+#id-pw-area {
+    display: flex;
+    border: 1px solid #ddd;
+    flex-basis: 60%;
+}
+
+/* id/pw 영역 */
+#id-pw-area > section:first-child {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 75%;
+}
+
+#id-pw-area > section:first-child > input{
+    flex-basis: 50%;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-right: 1px solid #ddd;
+}
+
+
+/*  id pw area 영역에 가운데 줄 긋기 기준 위에꺼면 아래에 선그어주어야함 */
+#id-pw-area > section:first-child > input:first-child {
+    border-bottom: 1px solid #ddd;
+}
+
+/* id pw area 영역에 가운데 줄 긋기 기준 아래꺼면 위에 선그어주어야함 */
+ /*
+    #id-pw-area > section:first-child > input:last-child {
+        border-top: 1px solid #ddd;
+    }
+ */
+
+ /* id,pw input 태그에 포커스가 맞춰졌을때 */
+ #id-pw-area > section:first-child > input:focus {
+    border: 2px solid #566ba8;
+ }
+
+
+/* 로그인버튼 영역 */
+#id-pw-area > section:last-child {
+    flex-basis: 25%;
+}
+
+/* 로그인 버튼 */
+#id-pw-area > section:last-child > button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#id-pw-area > section:last-child > button:hover {
+    background-color: #455ba8;
+    color: white;
+}
+
+/* 회원가임 / ID/PW 찾기 영역 */
+#signUp-find-area {
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+#signUp-find-area > a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+#signUp-find-area > span {
+    padding: 0 10px;
+}
+
+/* 아이디 저장 영역 */
+form[name='login-form'] > label {
+    margin-top: 5px;
+    font-size: 14px;
+}
