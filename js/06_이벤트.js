@@ -89,3 +89,5 @@ box.addEventListener("mouseout", function(){
     box.style.width = "0px";
 
 })
+
+const box2 = document.getElementById("box2")
