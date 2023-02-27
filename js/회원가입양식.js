@@ -18,6 +18,8 @@ document.getElementById("inputid").addEventListener("keyup", function(){
 })
 
 // 비밀번호 & 확인
+
+// 1) 비밀번호는 쓰지않고 비밀번호 확인에만 기입됐을때 
 document.getElementById("inputpw2").addEventListener("blur", function(){
     const regEx = /^[a-zA-Z0-9!@#$%^&*()_+|]{6,14}$/;
 
@@ -34,7 +36,23 @@ document.getElementById("inputpw2").addEventListener("blur", function(){
     }
 })
 
+
 document.getElementById("inputpw1").addEventListener("keyup", function(){
+    const inputpw1 = document.getElementById("inputpw1");
+    const inputpw2 = document.getElementById("inputpw2");
+
+    const pwcheck = document.getElementById("pwcheck");
+    
+    if(inputpw1.value == inputpw2.value) {
+        pwcheck.style.color = 'green'
+        pwcheck.innerText = '비밀번호 일치'
+    } else {
+        pwcheck.style.color = 'red'
+        pwcheck.innerText = '비밀번호 불일치'
+    }
+})
+
+document.getElementById("inputpw2").addEventListener("keyup", function(){
     const inputpw1 = document.getElementById("inputpw1");
     const inputpw2 = document.getElementById("inputpw2");
 
